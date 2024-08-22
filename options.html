@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Translator Settings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .option-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        .api-key-input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        #save {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        #save:hover {
+            background-color: #45a049;
+        }
+        #status {
+            margin-top: 1rem;
+            text-align: center;
+            color: #4CAF50;
+        }
+        .api-key-help {
+            font-size: 12px;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        .api-key-help a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .api-key-help a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OCR Translator Settings</h1>
+        <div class="option-group">
+            <label for="visionApiKey">
+                Google Cloud Vision API Key:
+                <input type="text" id="visionApiKey" class="api-key-input">
+            </label>
+            <div class="api-key-help">
+                <a href="https://cloud.google.com/vision/docs/setup" target="_blank" rel="noopener noreferrer">(How do I get an API key?)</a>
+            </div>
+        </div>
+        <div class="option-group">
+            <label for="translateApiKey">
+                Google Cloud Translate API Key:
+                <input type="text" id="translateApiKey" class="api-key-input">
+            </label>
+            <div class="api-key-help">
+                <a href="https://cloud.google.com/translate/docs/setup" target="_blank" rel="noopener noreferrer">(How do I get an API key?)</a>
+            </div>
+        </div>
+        <div class="option-group">
+            <label>
+                <input type="checkbox" id="debugMode"> Enable Debug Console
+            </label>
+        </div>
+        <button id="save">Save</button>
+        <div id="status"></div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
