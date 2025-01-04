@@ -13,7 +13,7 @@ A Chrome Extension that allows you to translate any image to your desired langua
 Simply right click on an image and request to translate the image!
 
 ## Sample Video
-https://streamable.com/8f9scv
+[Youtube link!](https://youtu.be/Au795oJRYZU)
 
 ## Installation
 
